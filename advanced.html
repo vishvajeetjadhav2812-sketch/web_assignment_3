@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Assignment 3 - Advanced</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>HTML Assignment – 3</h1>
+    <p>Topic: Forms – Advanced Questions (Q41–Q50)</p>
+  </header>
+
+  <nav class="nav"><a href="basic.html">Basic</a> | <a href="intermediate.html">Intermediate</a> | <a href="advanced.html">Advanced</a></nav>
+<main>
+
+
+  <section>
+    <h3>Q41. Registration form with full validation</h3>
+    <form action="#" method="post" id="q41form">
+      <label for="q41name">Name:</label>
+      <input type="text" id="q41name" name="name" minlength="3" required>
+      <label for="q41email">Email:</label>
+      <input type="email" id="q41email" name="email" required>
+      <label for="q41pass">Password:</label>
+      <input type="password" id="q41pass" name="password" minlength="6" required>
+      <label for="q41confirm">Confirm Password:</label>
+      <input type="password" id="q41confirm" name="confirm" required>
+      <fieldset>
+        <legend>Gender</legend>
+        <label><input type="radio" name="gender" value="male" required> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <label><input type="radio" name="gender" value="other"> Other</label>
+      </fieldset>
+      <label for="q41country">Country:</label>
+      <select id="q41country" name="country" required>
+        <option value="">-- Select Country --</option>
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+      </select>
+      <button type="submit">Register</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q42. Password pattern (8+ chars, 1 capital, 1 number)</h3>
+    <form action="#" method="post">
+      <label for="q42pass">Password:</label>
+      <input type="password" id="q42pass" name="password"
+             pattern="(?=.*\d)(?=.*[A-Z]).{8,}"
+             title="At least 8 characters, with at least 1 capital letter and 1 number" required>
+      <button type="submit">Submit</button>
+      <p class="note">Example of a valid password: Hello1234</p>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q43. Multi-step form</h3>
+    <form action="#" method="post" id="q43form">
+      <div class="step" id="q43s1">
+        <h4>Step 1: Personal Info</h4>
+        <label for="q43name">Name:</label>
+        <input type="text" id="q43name" name="name" required>
+        <label for="q43dob">Date of Birth:</label>
+        <input type="date" id="q43dob" name="dob" required>
+        <button type="button" data-next="q43s2">Next</button>
+      </div>
+      <div class="step" id="q43s2" hidden>
+        <h4>Step 2: Contact Info</h4>
+        <label for="q43email">Email:</label>
+        <input type="email" id="q43email" name="email" required>
+        <label for="q43phone">Phone:</label>
+        <input type="tel" id="q43phone" name="phone" pattern="[0-9]{10}" title="10 digits" required>
+        <button type="button" data-prev="q43s1">Back</button>
+        <button type="button" data-next="q43s3">Next</button>
+      </div>
+      <div class="step" id="q43s3" hidden>
+        <h4>Step 3: Submit</h4>
+        <p>Review your details and click Submit.</p>
+        <button type="button" data-prev="q43s2">Back</button>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q44. Survey form (text, radio, checkbox, dropdown, textarea)</h3>
+    <form action="#" method="post">
+      <label for="q44name">Your Name:</label>
+      <input type="text" id="q44name" name="name">
+      <fieldset>
+        <legend>How often do you use the internet?</legend>
+        <label><input type="radio" name="usage" value="daily"> Daily</label>
+        <label><input type="radio" name="usage" value="weekly"> Weekly</label>
+        <label><input type="radio" name="usage" value="rarely"> Rarely</label>
+      </fieldset>
+      <fieldset>
+        <legend>What do you use it for?</legend>
+        <label><input type="checkbox" name="purpose" value="study"> Study</label>
+        <label><input type="checkbox" name="purpose" value="entertainment"> Entertainment</label>
+        <label><input type="checkbox" name="purpose" value="work"> Work</label>
+        <label><input type="checkbox" name="purpose" value="shopping"> Shopping</label>
+      </fieldset>
+      <label for="q44device">Favourite device:</label>
+      <select id="q44device" name="device">
+        <option value="">-- Select --</option>
+        <option value="mobile">Mobile</option>
+        <option value="laptop">Laptop</option>
+        <option value="tablet">Tablet</option>
+      </select>
+      <label for="q44sug">Suggestions:</label>
+      <textarea id="q44sug" name="suggestions" rows="4"></textarea>
+      <button type="submit">Submit Survey</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q45. Job application form (PDF or DOC upload only)</h3>
+    <form action="#" method="post" enctype="multipart/form-data">
+      <label for="q45name">Full Name:</label>
+      <input type="text" id="q45name" name="name" required>
+      <label for="q45email">Email:</label>
+      <input type="email" id="q45email" name="email" required>
+      <label for="q45pos">Position:</label>
+      <select id="q45pos" name="position" required>
+        <option value="">-- Select --</option>
+        <option>Web Developer</option>
+        <option>Software Tester</option>
+        <option>UI/UX Designer</option>
+      </select>
+      <label for="q45resume">Resume (PDF or DOC):</label>
+      <input type="file" id="q45resume" name="resume"
+             accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
+      <button type="submit">Apply</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q46. Submit disabled if required fields are empty</h3>
+    <form action="#" method="post" id="q46form">
+      <label for="q46name">Name:</label>
+      <input type="text" id="q46name" name="name" required>
+      <label for="q46email">Email:</label>
+      <input type="email" id="q46email" name="email" required>
+      <label for="q46city">City:</label>
+      <input type="text" id="q46city" name="city" required>
+      <button type="submit" id="q46btn" disabled>Submit</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q47. ARIA labels and roles for accessibility</h3>
+    <form action="#" method="post" role="form" aria-label="Accessible sign up form">
+      <label for="q47name">Name:</label>
+      <input type="text" id="q47name" name="name" aria-required="true" aria-describedby="q47hint">
+      <span id="q47hint" class="note">Enter your full legal name.</span>
+      <label for="q47email">Email:</label>
+      <input type="email" id="q47email" name="email" aria-required="true">
+      <div role="radiogroup" aria-labelledby="q47genderlbl">
+        <span id="q47genderlbl">Gender:</span>
+        <label><input type="radio" name="gender" value="male"> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+      </div>
+      <label for="q47country">Country:</label>
+      <select id="q47country" name="country" aria-label="Select your country">
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+      </select>
+      <label for="q47msg">Message:</label>
+      <textarea id="q47msg" name="message" rows="3" aria-label="Your message"></textarea>
+      <button type="submit" aria-label="Submit the form">Submit</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q48. Date must be today or later (booking)</h3>
+    <form action="#" method="post">
+      <label for="q48date">Booking Date:</label>
+      <input type="date" id="q48date" name="booking" required>
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q49. Profile settings form</h3>
+    <form action="#" method="post" enctype="multipart/form-data">
+      <label for="q49name">Name:</label>
+      <input type="text" id="q49name" name="name" required>
+      <label for="q49pic">Profile Picture:</label>
+      <input type="file" id="q49pic" name="picture" accept="image/*">
+      <label for="q49theme">Colour Theme:</label>
+      <input type="color" id="q49theme" name="theme" value="#4f46e5">
+      <button type="submit">Save</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q50. Feedback form with star rating</h3>
+    <form action="#" method="post">
+      <label for="q50name">Name:</label>
+      <input type="text" id="q50name" name="name">
+      <fieldset class="stars-set">
+        <legend>Rating</legend>
+        <div class="stars">
+          <input type="radio" id="q50s5" name="rating" value="5" required><label for="q50s5" title="5 stars">★</label>
+          <input type="radio" id="q50s4" name="rating" value="4"><label for="q50s4" title="4 stars">★</label>
+          <input type="radio" id="q50s3" name="rating" value="3"><label for="q50s3" title="3 stars">★</label>
+          <input type="radio" id="q50s2" name="rating" value="2"><label for="q50s2" title="2 stars">★</label>
+          <input type="radio" id="q50s1" name="rating" value="1"><label for="q50s1" title="1 star">★</label>
+        </div>
+      </fieldset>
+      <label for="q50comment">Comments:</label>
+      <textarea id="q50comment" name="comment" rows="4"></textarea>
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </section>
+
+  </main>
+
+<footer><p>HTML Assignment 3 – Forms</p></footer>
+
+<script src="script.js"></script>
+</body>
+</html>

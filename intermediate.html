@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Assignment 3 - Intermediate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>HTML Assignment – 3</h1>
+    <p>Topic: Forms – Intermediate Questions (Q21–Q40)</p>
+  </header>
+
+  <nav class="nav"><a href="basic.html">Basic</a> | <a href="intermediate.html">Intermediate</a> | <a href="advanced.html">Advanced</a></nav>
+<main>
+
+
+  <section>
+    <h3>Q21. Login form</h3>
+    <form action="#" method="post">
+      <label for="q21user">Username:</label>
+      <input type="text" id="q21user" name="username" required>
+      <label for="q21pass">Password:</label>
+      <input type="password" id="q21pass" name="password" required>
+      <button type="submit">Login</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q22. Contact form (Name, Email, Phone, Message)</h3>
+    <form action="#" method="post">
+      <label for="q22name">Name:</label>
+      <input type="text" id="q22name" name="name" required>
+      <label for="q22email">Email:</label>
+      <input type="email" id="q22email" name="email" required>
+      <label for="q22phone">Phone:</label>
+      <input type="tel" id="q22phone" name="phone">
+      <label for="q22msg">Message:</label>
+      <textarea id="q22msg" name="message" rows="4"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q23. Payment Method radio buttons</h3>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Payment Method</legend>
+        <label><input type="radio" name="payment" value="card" required> Credit Card</label>
+        <label><input type="radio" name="payment" value="upi"> UPI</label>
+        <label><input type="radio" name="payment" value="cod"> Cash on Delivery</label>
+      </fieldset>
+      <button type="submit">Pay</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q24. Checkboxes for multiple languages</h3>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Languages Known</legend>
+        <label><input type="checkbox" name="lang" value="english"> English</label>
+        <label><input type="checkbox" name="lang" value="hindi"> Hindi</label>
+        <label><input type="checkbox" name="lang" value="french"> French</label>
+        <label><input type="checkbox" name="lang" value="spanish"> Spanish</label>
+      </fieldset>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q25. Age restricted between 18-60 (min / max)</h3>
+    <form action="#" method="post">
+      <label for="q25age">Age (18-60):</label>
+      <input type="number" id="q25age" name="age" min="18" max="60" required>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q26. Pattern validation for 10-digit phone number</h3>
+    <form action="#" method="post">
+      <label for="q26phone">Phone Number:</label>
+      <input type="text" id="q26phone" name="phone" pattern="[0-9]{10}"
+             title="Enter exactly 10 digits" placeholder="9876543210" required>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q27. File upload - only PDF allowed (accept)</h3>
+    <form action="#" method="post" enctype="multipart/form-data">
+      <label for="q27file">Upload PDF:</label>
+      <input type="file" id="q27file" name="pdf" accept=".pdf,application/pdf" required>
+      <button type="submit">Upload</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q28. Dropdown for profession</h3>
+    <form action="#" method="post">
+      <label for="q28prof">Profession:</label>
+      <select id="q28prof" name="profession">
+        <option value="">-- Select --</option>
+        <option value="student">Student</option>
+        <option value="teacher">Teacher</option>
+        <option value="developer">Developer</option>
+        <option value="designer">Designer</option>
+      </select>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q29. Submit disabled until Terms &amp; Conditions are checked</h3>
+    <form action="#" method="post">
+      <label for="q29name">Name:</label>
+      <input type="text" id="q29name" name="name">
+      <label><input type="checkbox" id="q29terms"> I accept the Terms &amp; Conditions</label>
+      <button type="submit" id="q29btn" disabled>Submit</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q30. &lt;fieldset&gt; and &lt;legend&gt; for address details</h3>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Address Details</legend>
+        <label for="q30street">Street:</label>
+        <input type="text" id="q30street" name="street">
+        <label for="q30city">City:</label>
+        <input type="text" id="q30city" name="city">
+        <label for="q30state">State:</label>
+        <input type="text" id="q30state" name="state">
+        <label for="q30pin">PIN Code:</label>
+        <input type="text" id="q30pin" name="pin" pattern="[0-9]{6}" title="6-digit PIN code">
+      </fieldset>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q31. Email must follow correct format (abc@mail.com)</h3>
+    <form action="#" method="post">
+      <label for="q31email">Email:</label>
+      <input type="email" id="q31email" name="email" placeholder="abc@mail.com"
+             pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}" title="Format: abc@mail.com" required>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q32. Placeholder attribute in inputs</h3>
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Enter your full name">
+      <input type="email" name="email" placeholder="Enter your email address">
+      <input type="text" name="city" placeholder="Enter your city">
+    </form>
+  </section>
+
+  <section>
+    <h3>Q33. Password with Confirm Password</h3>
+    <form action="#" method="post" id="q33form">
+      <label for="q33pass">Password:</label>
+      <input type="password" id="q33pass" name="password" required>
+      <label for="q33confirm">Confirm Password:</label>
+      <input type="password" id="q33confirm" name="confirm" required>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q34. Reset button - test clearing inputs</h3>
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Name">
+      <input type="email" name="email" placeholder="Email">
+      <textarea name="note" rows="3" placeholder="Note"></textarea>
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q35. Newsletter signup form</h3>
+    <form action="#" method="post">
+      <label for="q35name">Name:</label>
+      <input type="text" id="q35name" name="name" required>
+      <label for="q35email">Email:</label>
+      <input type="email" id="q35email" name="email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q36. Disabled / readonly input field</h3>
+    <form action="#" method="post">
+      <label for="q36dis">Disabled field:</label>
+      <input type="text" id="q36dis" name="disabled" value="Cannot edit (disabled)" disabled>
+      <label for="q36ro">Readonly field:</label>
+      <input type="text" id="q36ro" name="readonly" value="Cannot edit (readonly)" readonly>
+      <label for="q36ed">Editable field:</label>
+      <input type="text" id="q36ed" name="editable" value="You can edit this">
+    </form>
+  </section>
+
+  <section>
+    <h3>Q37. Hidden input field (user ID)</h3>
+    <form action="#" method="post">
+      <input type="hidden" name="user_id" value="USR1001">
+      <label for="q37name">Name:</label>
+      <input type="text" id="q37name" name="name">
+      <button type="submit">Submit</button>
+      <p class="note">A hidden field "user_id" with value USR1001 is sent along with the form (not visible).</p>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q38. Range input 1 to 10 for rating experience</h3>
+    <form action="#" method="post">
+      <label for="q38rate">Rate your experience:</label>
+      <input type="range" id="q38rate" name="rating" min="1" max="10" value="5"
+             oninput="document.getElementById('q38out').textContent = this.value">
+      <output id="q38out">5</output> / 10
+    </form>
+  </section>
+
+  <section>
+    <h3>Q39. Colour picker to set background colour</h3>
+    <form action="#" method="post">
+      <label for="q39color">Choose background colour:</label>
+      <input type="color" id="q39color" name="bgcolor" value="#ffffff">
+      <div id="q39box" class="colorbox">This box changes colour</div>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q40. tel input type for phone number</h3>
+    <form action="#" method="post">
+      <label for="q40tel">Phone:</label>
+      <input type="tel" id="q40tel" name="phone" placeholder="123-456-7890"
+             pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Format: 123-456-7890">
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- ===================== ADVANCED QUESTIONS ===================== -->
+  </main>
+
+<footer><p>HTML Assignment 3 – Forms</p></footer>
+
+<script src="script.js"></script>
+</body>
+</html>

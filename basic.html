@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Assignment 3 - Basic</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>HTML Assignment – 3</h1>
+    <p>Topic: Forms – Basic Questions (Q1–Q20)</p>
+  </header>
+
+  <nav class="nav"><a href="basic.html">Basic</a> | <a href="intermediate.html">Intermediate</a> | <a href="advanced.html">Advanced</a></nav>
+<main>
+
+
+  <section>
+    <h3>Q1. Single text input for username</h3>
+    <form action="#" method="post">
+      <input type="text" name="username" placeholder="Username">
+    </form>
+  </section>
+
+  <section>
+    <h3>Q2. Password input (hides typed characters)</h3>
+    <form action="#" method="post">
+      <input type="password" name="password" placeholder="Password">
+    </form>
+  </section>
+
+  <section>
+    <h3>Q3. First Name and Last Name</h3>
+    <form action="#" method="post">
+      <input type="text" name="firstname" placeholder="First Name">
+      <input type="text" name="lastname" placeholder="Last Name">
+    </form>
+  </section>
+
+  <section>
+    <h3>Q4. Submit button that sends data</h3>
+    <form action="#" method="post">
+      <input type="text" name="data" placeholder="Enter something">
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q5. Reset button that clears inputs</h3>
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Name">
+      <input type="text" name="city" placeholder="City">
+      <button type="reset">Reset</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q6. Radio buttons for gender</h3>
+    <form action="#" method="post">
+      <label><input type="radio" name="gender" value="male"> Male</label>
+      <label><input type="radio" name="gender" value="female"> Female</label>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q7. Checkboxes for hobbies</h3>
+    <form action="#" method="post">
+      <label><input type="checkbox" name="hobby" value="reading"> Reading</label>
+      <label><input type="checkbox" name="hobby" value="sports"> Sports</label>
+      <label><input type="checkbox" name="hobby" value="coding"> Coding</label>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q8. File upload for profile picture</h3>
+    <form action="#" method="post" enctype="multipart/form-data">
+      <label for="q8pic">Upload profile picture:</label>
+      <input type="file" id="q8pic" name="profilepic" accept="image/*">
+    </form>
+  </section>
+
+  <section>
+    <h3>Q9. &lt;label&gt; tag with a text input</h3>
+    <form action="#" method="post">
+      <label for="q9name">Full Name:</label>
+      <input type="text" id="q9name" name="fullname">
+    </form>
+  </section>
+
+  <section>
+    <h3>Q10. Dropdown for country</h3>
+    <form action="#" method="post">
+      <label for="q10country">Country:</label>
+      <select id="q10country" name="country">
+        <option value="">-- Select Country --</option>
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+        <option value="canada">Canada</option>
+        <option value="australia">Australia</option>
+      </select>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q11. Textarea for comments</h3>
+    <form action="#" method="post">
+      <label for="q11comments">Comments:</label>
+      <textarea id="q11comments" name="comments" rows="4" cols="40" placeholder="Write your comments here..."></textarea>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q12. Button labelled "Click Me"</h3>
+    <form action="#" method="post">
+      <button type="button" onclick="alert('Button clicked!')">Click Me</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q13. Required attribute on a name field</h3>
+    <form action="#" method="post">
+      <label for="q13name">Name:</label>
+      <input type="text" id="q13name" name="name" required>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q14. Email input with validation</h3>
+    <form action="#" method="post">
+      <label for="q14email">Email:</label>
+      <input type="email" id="q14email" name="email" required>
+      <button type="submit">Validate</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q15. Number input for age</h3>
+    <form action="#" method="post">
+      <label for="q15age">Age:</label>
+      <input type="number" id="q15age" name="age">
+    </form>
+  </section>
+
+  <section>
+    <h3>Q16. Date picker for birthdate</h3>
+    <form action="#" method="post">
+      <label for="q16dob">Birthdate:</label>
+      <input type="date" id="q16dob" name="dob">
+    </form>
+  </section>
+
+  <section>
+    <h3>Q17. Time input for appointment</h3>
+    <form action="#" method="post">
+      <label for="q17time">Appointment Time:</label>
+      <input type="time" id="q17time" name="appointment">
+    </form>
+  </section>
+
+  <section>
+    <h3>Q18. Colour input for favourite colour</h3>
+    <form action="#" method="post">
+      <label for="q18color">Favourite Colour:</label>
+      <input type="color" id="q18color" name="color" value="#4f46e5">
+    </form>
+  </section>
+
+  <section>
+    <h3>Q19. Range input for volume (1-100)</h3>
+    <form action="#" method="post">
+      <label for="q19vol">Volume:</label>
+      <input type="range" id="q19vol" name="volume" min="1" max="100" value="50"
+             oninput="document.getElementById('q19out').textContent = this.value">
+      <output id="q19out">50</output>
+    </form>
+  </section>
+
+  <section>
+    <h3>Q20. &lt;fieldset&gt; and &lt;legend&gt; for personal details</h3>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Personal Details</legend>
+        <label for="q20name">Name:</label>
+        <input type="text" id="q20name" name="name">
+        <label for="q20email">Email:</label>
+        <input type="email" id="q20email" name="email">
+      </fieldset>
+    </form>
+  </section>
+
+  <!-- ===================== INTERMEDIATE QUESTIONS ===================== -->
+  </main>
+
+<footer><p>HTML Assignment 3 – Forms</p></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
